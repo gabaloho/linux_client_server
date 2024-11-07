@@ -70,22 +70,24 @@ This is the setup for each network service on the server, including DHCP, DNS, a
      ```bash
      sudo systemctl restart bind9
      ```
-   - **Web Server (Nginx)**:
-     bash
-     sudo apt install nginx
-     sudo systemctl start nginx
-     sudo systemctl enable nginx
-     
-     Add a sample HTML page:
-     bash
-     sudo nano /var/www/html/index.html
-     
-     Example content:
-     html
-     <html>
-     <body>
-         <h1>Welcome to the Local Library’s Website</h1>
-         <p>This is a demo page hosted on our internal server.</p>
-     </body>
-     </html>
-     
+###Nginx Web Server Setup
+**Install Nginx**
+```bash
+sudo apt install nginx
+  ```
+Start and enable the Nginx service:
+```bash
+sudo systemctl start nginx
+sudo systemctl enable nginx
+ ```
+###Create a simple HTML page for the demo:
+```bash
+sudo nano /var/www/html/index.html
+ ```
+**Example content:**
+<html>
+<body>
+    <h1>Welcome to the Local Library’s Website</h1>
+    <p>This is a demo page hosted on our internal server.</p>
+</body>
+</html>
